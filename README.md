@@ -24,9 +24,9 @@ This repository contains all archives for the project __get_next_line__ in the _
 
 ## About
 
-[You can find more information in the subject](https://github.com/Javisanchezf/42pdfs/blob/main/get_next_line_subject.pdf).
+[You can find more information in the subject](https://github.com/Javisanchezf/42Malaga-pdfs/blob/main/get_next_line_subject.pdf).
 
-The code in this repository follows [the rules of the Norminette](https://github.com/Javisanchezf/42pdfs/blob/main/norme.pdf).
+The code in this repository follows [the rules of the Norminette](https://github.com/Javisanchezf/42Malaga-pdfs/blob/main/norme.pdf).
 
 ## Index
 Replicates the operation of the printf function.
