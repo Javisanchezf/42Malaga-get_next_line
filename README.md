@@ -6,7 +6,7 @@
 
 > School 42 Málaga cursus project.
 
-This repository contains all archives for the project __get_next_line__ in the __School 42 Málaga core cursus__. It's a custom-made library of useful functions in __C language__. The repository includes the `Makefile` and the `get_next_line.h` library.
+This repository contains all archives for the project __get_next_line__ in the __School 42 Málaga core cursus__. It's a custom-made function in __C language__. The repository includes the `Makefile` and the `get_next_line.h` library.
 
 <h2 align = center>
 	<a href="#about">About</a>
@@ -24,7 +24,7 @@ This repository contains all archives for the project __get_next_line__ in the _
 
 ## About
 
-This project is a __C library__ of useful functions that are allowed to be used in future __School 42 cursus__ projects. With access to this library, the coding proccess in incoming projects will be more effective. The aim of rewrite this functions is to get a better understanding of them, and get a whide range of utilities for the next projects. [You can find more information in the subject](https://github.com/Javisanchezf/42pdfs/blob/main/get_next_line_subject.pdf). As it's specified in the subjet, all the archives are in the same folder.
+[You can find more information in the subject](https://github.com/Javisanchezf/42pdfs/blob/main/get_next_line_subject.pdf).
 
 The code in this repository follows [the rules of the Norminette](https://github.com/Javisanchezf/42pdfs/blob/main/norme.pdf).
 
