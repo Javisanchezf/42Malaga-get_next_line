@@ -37,8 +37,8 @@ The library is written in __C language__ and needs the `gcc` compiler, with `<st
 
 ### 1. Download the repository
 ```
-git clone https://github.com/Javisanchezf/42-get_next_line.git 42-get_next_line
-cd 42-get_next_line
+git clone https://github.com/Javisanchezf/42Malaga-get_next_line.git 42Malaga-get_next_line
+cd 42Malaga-get_next_line
 ```
 
 ### 2. Compiling the library
@@ -71,7 +71,7 @@ To use the library functions in your code, simply include this header:
 ```
 
 ## Testing
-This library have been tested with the normal mode of [Francinette](https://github.com/xicodomingues/francinette) to the date of 14/03/2023.
+This library have been tested with the normal mode of [Francinette](https://github.com/xicodomingues/francinette) to the date of 23/03/2023.
 
 ## License
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
