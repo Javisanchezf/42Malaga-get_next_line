@@ -6,11 +6,12 @@
 #    By: javiersa <javiersa@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/22 17:40:11 by javiersa          #+#    #+#              #
-#    Updated: 2023/03/29 21:37:53 by javiersa         ###   ########.fr        #
+#    Updated: 2023/03/29 21:48:30 by javiersa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = get_next_line.a
+PERSONALNAME = Get_next_line
 BONUS_NAME = get_next_line_bonus.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
