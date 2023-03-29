@@ -6,7 +6,7 @@
 #    By: javiersa <javiersa@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/22 17:40:11 by javiersa          #+#    #+#              #
-#    Updated: 2023/03/29 21:48:30 by javiersa         ###   ########.fr        #
+#    Updated: 2023/03/29 22:34:36 by javiersa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ all: $(NAME)
 
 bonus: $(BONUS_OBJS)
 	@ar rcs $(NAME) $(BONUS_OBJS)
-	@echo "$(GREEN)$(PERSONALNAME)_bonus -> Objects and library created successfully.$(DEFAULT)"
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "$(GREEN)$(PERSONALNAME) -> Objects and library created successfully.$(DEFAULT)"
