@@ -6,7 +6,7 @@
 #    By: javiersa <javiersa@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/22 17:40:11 by javiersa          #+#    #+#              #
-#    Updated: 2023/03/29 22:34:36 by javiersa         ###   ########.fr        #
+#    Updated: 2023/03/31 19:34:12 by javiersa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,24 +21,25 @@ BONUS_SRC = get_next_line_bonus.c get_next_line_utils_bonus.c
 
 OBJS := $(SRC:.c=.o)
 BONUS_OBJS := $(BONUS_SRC:.c=.o)
+
 .c.o:
 	@$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
-
+	@echo "$(GREEN)Compiling:$(DEFAULT) $(notdir $<)"
 all: $(NAME)
+
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "$(MAGENTA)Library $(NAME) created successfully.$(DEFAULT)"
+clean:
+	@$(CLEAN) ./$(OBJS) ./$(BONUS_OBJS)
+	@echo "$(RED)Removing:$(DEFAULT) All objects from $(PERSONALNAME)."
+fclean: clean
+	@$(CLEAN) ./$(NAME) ./$(BONUS_OBJS)
+	@echo "$(RED)Removing:$(DEFAULT) Library $(NAME)."
+re: fclean all
 
 bonus: $(BONUS_OBJS)
 	@ar rcs $(NAME) $(BONUS_OBJS)
-$(NAME): $(OBJS)
-	@ar rcs $(NAME) $(OBJS)
-	@echo "$(GREEN)$(PERSONALNAME) -> Objects and library created successfully.$(DEFAULT)"
-clean:
-	@$(CLEAN) ./$(OBJS) ./$(BONUS_OBJS)
-	@echo "$(RED)$(PERSONALNAME) -> Objects files deleted.$(DEFAULT)"
-fclean:
-	@$(CLEAN) ./$(OBJS) ./$(BONUS_OBJS)
-	@$(CLEAN) ./$(NAME)
-	@echo "$(RED)$(PERSONALNAME) -> Library and objects files deleted.$(DEFAULT)"
-re: fclean all
 
 #Personal use
 git: fclean gitignore
@@ -53,7 +54,13 @@ gitignore:
 .PHONY : all clean fclean re bonus compile git gitignore
 
 #COLORS
-RED = \033[1;31m
-GREEN = \033[1;32m
-YELLOW = \033[1;33m
-DEFAULT = \033[0m
+BOLD	:= \033[1m
+BLACK	:= \033[30;1m
+RED		:= \033[31;1m
+GREEN	:= \033[32;1m
+YELLOW	:= \033[33;1m
+BLUE	:= \033[34;1m
+MAGENTA	:= \033[35;1m
+CYAN	:= \033[36;1m
+WHITE	:= \033[37;1m
+DEFAULT	:= \033[0m
