@@ -12,11 +12,11 @@
 
 #include "get_next_line_bonus.h"
 
-char	*ft_freeandjoin(char *buffer, char *aux)
+char	*ft_freeandjoin_gnl(char *buffer, char *aux)
 {
 	char	*strjoin;
 
-	strjoin = ft_strjoin(buffer, aux);
+	strjoin = ft_strjoin_gnl(buffer, aux);
 	free(buffer);
 	buffer = NULL;
 	return (strjoin);
@@ -33,7 +33,7 @@ char	*ft_next(char *buffer)
 	{
 		if (buffer[i] == '\n')
 		{
-			line = ft_calloc((ft_strlen(&buffer[i])), sizeof(char));
+			line = ft_calloc_gnl((ft_strlen_gnl(&buffer[i])), sizeof(char));
 			i++;
 			j = 0;
 			while (buffer[i])
@@ -59,14 +59,14 @@ char	*ft_line(char *buffer)
 		i++;
 	if (buffer[i] == '\n')
 	{
-		line = ft_calloc(i + 2, sizeof(char));
+		line = ft_calloc_gnl(i + 2, sizeof(char));
 		line[i] = '\n';
 	}
 	else
-		line = ft_calloc(i + 1, sizeof(char));
+		line = ft_calloc_gnl(i + 1, sizeof(char));
 	while (--i >= 0)
 		line[i] = buffer[i];
-	if (ft_strlen(line) == 0)
+	if (ft_strlen_gnl(line) == 0)
 		return (free(line), NULL);
 	return (line);
 }
@@ -77,16 +77,16 @@ char	*read_file(int fd, char *buffer)
 	int		i;
 
 	if (!buffer)
-		buffer = ft_calloc(1, 1);
-	aux = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+		buffer = ft_calloc_gnl(1, 1);
+	aux = ft_calloc_gnl(BUFFER_SIZE + 1, sizeof(char));
 	i = 1;
 	while (i > 0)
 	{
 		i = read(fd, aux, BUFFER_SIZE);
 		if (i != BUFFER_SIZE)
 			aux[i] = 0;
-		buffer = ft_freeandjoin(buffer, aux);
-		if (ft_strchr(aux, '\n'))
+		buffer = ft_freeandjoin_gnl(buffer, aux);
+		if (ft_strchr_gnl(aux, '\n'))
 			break ;
 	}
 	free(aux);

@@ -23,10 +23,10 @@ char	*get_next_line(int fd);
 char	*read_file(int fd, char *res);
 char	*ft_line(char *buffer);
 char	*ft_next(char *buffer);
-int		ft_strlen(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-char	*ft_strchr(const char *s, int c);
-void	*ft_calloc(size_t count, size_t size);
+int		ft_strlen_gnl(const char *s);
+char	*ft_strjoin_gnl(char const *s1, char const *s2);
+void	*ft_memcpy_gnl(void *dst, const void *src, size_t n);
+char	*ft_strchr_gnl(const char *s, int c);
+void	*ft_calloc_gnl(size_t count, size_t size);
 
 #endif
