@@ -43,13 +43,15 @@ bonus: $(BONUS_OBJS)
 
 #Personal use
 git: fclean gitignore
-	git add *
-	git commit -m "Little changes"
-	git push
-	git ls-files
+	@git add *
+	@echo "$(BOLD)$(YELLOW)Git:$(WHITE) Adding all archives.$(DEFAULT)"
+	@git commit -m "Little changes"
+	@echo "$(BOLD)$(CYAN)Git:$(WHITE) Commit this changes with "Little changes".$(DEFAULT)"
+	@git push
+	@echo "$(BOLD)$(GREEN)Git:$(WHITE) Pushing all changes.$(DEFAULT)"
 gitignore:
 	@echo ".*\n*.out\n*.o\n*.a">.gitignore
-	@echo "$(GREEN)Gitignore created successfully.$(DEFAULT)"
+	@echo "$(GREEN)Creating:$(DEFAULT) Gitignore."
 
 .PHONY : all clean fclean re bonus compile git gitignore
 
