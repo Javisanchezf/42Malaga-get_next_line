@@ -6,7 +6,7 @@
 /*   By: javiersa <javiersa@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:45:41 by javiersa          #+#    #+#             */
-/*   Updated: 2023/01/22 17:50:27 by javiersa         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:02:40 by javiersa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # endif
 # include <unistd.h>
 # include <stdlib.h>
-# include <fcntl.h>
 
 char	*get_next_line(int fd);
 char	*read_file(int fd, char *res);
